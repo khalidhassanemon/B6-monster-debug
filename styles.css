@@ -190,3 +190,12 @@ button {
     flex-direction: column;
   }
 }
+
+
+.input-text{
+  margin-top: 8px;
+  width: 100% !important;
+  margin-right: 63px;
+  padding: 21px;
+  font-size: 25px;
+}
