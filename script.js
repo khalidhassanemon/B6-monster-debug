@@ -49,14 +49,12 @@ const typeController = (e) => {
 
   userText += newLetter;
 
-  // userText += newLetter;
   const newLetterCorrect = validate(newLetter);
   // const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
 
-    // display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
    } else {
     errorCount++;
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
@@ -78,11 +76,11 @@ const validate = (key) => {
 // FINISHED TYPING
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
-  // document.removeEventListener("keydown", typeController);
+
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  // const finishTime = new Date().getTime();
+
   const timeTaken = parseInt((finishTime - startTime) / 1000);
   // const timeTaken = (finishTime - startTime) / 1000;
 
@@ -95,7 +93,7 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   // show result
-  // ekhane error silo
+  // ekhane error silo(+)silo
   resultModal.innerHTML = `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
